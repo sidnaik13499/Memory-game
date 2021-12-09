@@ -28,7 +28,6 @@ button {
   }
 
 .grid{
-    padding-left: 5rem;
     display: flex;
     flex-wrap: wrap;
     height: 300px;
