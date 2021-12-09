@@ -15,10 +15,9 @@
     }
 
     button {
-        line-height: 60px;
-        margin-bottom: 30px;
         font-weight: bold;
-        padding: 0 40px;
+        padding:0 40px;
+        line-height: 60px;
         background: salmon;
         border: none;
         text-align: center;
