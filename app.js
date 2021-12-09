@@ -80,8 +80,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
         var cards = document.querySelectorAll('img');
         const optionOneId = cardChosenId[0]
         const optionTwoId = cardChosenId[1]
-
-        if(cardChosen[0] === cardChosen[1] && optionOneId!=optionTwoId){
+        if(optionOneId==optionTwoId){
+            cards[optionOneId].setAttribute('src','images/blank.png');
+            cards[optionTwoId].setAttribute('src','images/blank.png');
+            alert("Dont select same cards.")   
+        }else if(cardChosen[0] === cardChosen[1] && optionOneId!==optionTwoId){
             alert("You have found a match")
             cards[optionOneId].setAttribute('src','images/white.png');
             cards[optionOneId].style.pointerEvents = "none";
@@ -97,10 +100,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
         cardChosenId = []
         resultDisplay.textContent = cardsWon.length
         if(cardsWon.length === cardArray.length/2){
-            resultDisplay.textContent = `Congratulations! You have found all the matches. You have used ${count} moves to complete the puzzle`
+            resultDisplay.textContent = `Congratulations! You have found all the matches. You have used ${count} chances to complete the puzzle`
             const btn = document.createElement("button")
             btn.innerHTML = "Play again"
-            btn.setAttribute('onClick','window.location.reload();')
+            btn.setAttribute('onClick','window.location.reload')
             grid.remove();
             const play = document.querySelector('.play');
             play.appendChild(btn)    
