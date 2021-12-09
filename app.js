@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         const optionOneId = cardChosenId[0]
         const optionTwoId = cardChosenId[1]
 
-        if(cardChosen[0] === cardChosen[1]){
+        if(cardChosen[0] === cardChosen[1] && optionOneId!=optionTwoId){
             alert("You have found a match")
             cards[optionOneId].setAttribute('src','images/white.png');
             cards[optionOneId].style.pointerEvents = "none";
