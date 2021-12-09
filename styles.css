@@ -33,8 +33,9 @@ button {
     height: 300px;
     width: 400px;
     margin: auto;
-    text-align: center;
-    padding-bottom:30px;
+    text-align:center;
+    padding-bottom: 150px;
+    margin-bottom: 20px;
 }
 
 #footer {
